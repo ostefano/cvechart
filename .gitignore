@@ -52,3 +52,8 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
+allitems.xml
+nvdcve-2.0-20*.xml
+*.dat
+*.pdf
+
