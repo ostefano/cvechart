@@ -127,7 +127,11 @@ def main(argv):
     otherc = v[VULNERABILITY['otherc']]
     total = stackc + heapc + intc + pointc + fmtc + otherc
 
-    percentage = (float(use_after) / float(total)) * float(100)
+    if total == 0:
+        print "ERROR (total=0) - {} - {} <-> {} <-> {}".format(k,v, v2, percentage)
+        percentage = 0
+    else:
+        percentage = (float(use_after) / float(total)) * float(100)
 
     line_1.append(str(date))
     line_1.append(str(stackc))
